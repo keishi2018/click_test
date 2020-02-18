@@ -1,0 +1,55 @@
+<html>
+  <head>
+    
+  </head>
+  <body>
+    
+ 
+  <div id="app">
+    <div class="clearfix">
+      <div v-for="obj in colors" 
+           class="palette" 
+           v-bind:style="{background:obj.bg_color}"
+           v-on:click="setRedColor(obj, 'red')">
+      </div>
+    </div>
+  </div>
+
+  <style type="text/css">
+    .palette {
+        float:left;
+        margin:10px;
+        width:100px;
+        height:100px;
+      }
+  
+    .clearfix:after {
+      content:" ";
+      display:block;
+      clear:both;
+    }
+
+  </style>
+
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        colors: [
+          { bg_color : "pink"},
+          { bg_color : "orange"},
+          { bg_color : "blue"},
+          { bg_color : "yellow"},
+          { bg_color : "green"}
+        ]
+      },
+      methods: {
+        setRedColor: function (obj, color) {
+          obj['bg_color']=color;
+        }
+      }              
+    })
+  </script>
+
+  </body>
+</html>

@@ -1,0 +1,12 @@
+.palette {
+    float:left;
+    margin:10px;
+    width:100px;
+    height:100px;
+  }
+  
+  .clearfix:after {
+    content:" ";
+    display:block;
+    clear:both;
+  }
